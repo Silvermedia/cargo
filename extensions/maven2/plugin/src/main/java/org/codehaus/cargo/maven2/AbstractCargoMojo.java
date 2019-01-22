@@ -704,6 +704,11 @@ public abstract class AbstractCargoMojo extends AbstractCommonMojo
             }
         }
 
+        if (container != null && getContainerElement() != null)
+        {
+            getContainerElement().updateContainer(container, cargoProject);
+        }
+
         if (container == null)
         {
             container = createNewContainer();
